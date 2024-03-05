@@ -1,0 +1,35 @@
+body {
+    background-color: blanchedalmond;
+}
+.caja {
+    width: 120px;
+}
+.caja img{
+    margin: 20px 0px 0px 20px;
+}
+
+main {
+    margin: 21px 10% 10%;
+    display: flex;
+}
+
+.encriptador {
+    width: 70%;
+}
+
+.encriptador input {
+    width: 100%;
+}
+
+.botonesEncriptador {
+    text-align: center;
+}
+
+.resultado {
+    width: 30%;
+}
+
+.resultado input {
+    width: 100%;
+}
+
