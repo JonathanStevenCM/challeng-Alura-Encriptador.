@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Libre+Franklin:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Encriptador</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css.css">
@@ -14,7 +17,7 @@
             <img src="imagenes/Logo-2.png" alt="Logo AluraLatam" class="logo_class" >
         </section>
         <section class="encriptador">
-            <textarea type="text" placeholder="¿Qué quiere codificar?" rows="10" cols="15"></textarea>
+            <textarea type="text" placeholder="¿Qué quiere encriptar o desencriptar?" rows="10" cols="15"></textarea>
             <div>
                 <div class="alert-content">
                     <img src="imagenes/Vector.svg" alt="icon exclamation" height="16" width="16" />
@@ -27,12 +30,21 @@
             </div>
         </section>
         <section class="resultado">
-            <div class="result-content"></div>
+            <div class="result-content">
+                <div>
+                    <img src="imagenes/Muñeco.png" alt="muñeco">
+                    <div class="encriptador-area">
+                        <p class="no-text">Níngun mensaje fue encontrado</p>
+                        <p class="call-of-write">Ingresa el texto que desees encriptar o desencriptador</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>Steven C. Martínez</p>
+        <p style="text-align: center;">&copy; Steven C. Martínez 2024</p>
     </footer>
+    <script src="./js.js"></script>
 </body>
 </html>
