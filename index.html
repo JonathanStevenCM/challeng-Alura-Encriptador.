@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Libre+Franklin:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="reset.css?v=0.01">
+    <link rel="stylesheet" href="css.css?v=0.01" >
 </head>
 
 <body>
@@ -17,27 +17,30 @@
             <img src="imagenes/Logo-2.png" alt="Logo AluraLatam" class="logo_class" >
         </section>
         <section class="encriptador">
-            <textarea type="text" placeholder="¿Qué quiere encriptar o desencriptar?" rows="10" cols="15"></textarea>
+            <textarea type="text" id="datos" placeholder="Ingrese el texto aqui" rows="10" cols="15"></textarea>
             <div>
                 <div class="alert-content">
                     <img src="imagenes/Vector.svg" alt="icon exclamation" height="16" width="16" />
                     <span>Solo letras minusculas y sin acento</span>
                 </div>
                 <div class="botonesEncriptador">
-                    <button class="btn-encripter">Encriptador</button>
-                    <button class="btn-dencripter">Desencriptador</button>
+                    <button class="btn-encripter" onclick="encrypt()">Encriptador</button>
+                    <button class="btn-dencripter" onclick="decrypt()">Desencriptador</button>
                 </div>
             </div>
         </section>
-        <section class="resultado">
-            <div class="result-content">
-                <div>
-                    <img src="imagenes/Muñeco.png" alt="muñeco">
-                    <div class="encriptador-area">
-                        <p class="no-text">Níngun mensaje fue encontrado</p>
-                        <p class="call-of-write">Ingresa el texto que desees encriptar o desencriptador</p>
+        <section class="resultado" id="resultado">
+            <div class="result-content" id="result-content">
+                <div id="pre-ejecucion">
+                    <img src="imagenes/Muñeco.png" alt="muñeco" class="imagen" id="imgDel">
+                    <div id="encriptador-area">
+                        <p class="no-text" id="textDel">Ningún mensaje fue encontrado</p>
+                        <p class="call-of-write" id="textDel2">Ingresa el texto que desees encriptar o desencriptador</p>
+
                     </div>
                 </div>
+                <p type="text" class="no-show" id="text-cifrado"></p>
+                <button id="copiar" class="no-show" onclick="copyText()">Copiar</button>
             </div>
         </section>
     </main>

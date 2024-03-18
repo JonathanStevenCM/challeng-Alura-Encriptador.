@@ -41,12 +41,15 @@ main {
         width: 100%;
         background: transparent;
         border: none !important;
-        height: 50%;
+        height: 64%;
         font-size: 32px;
         font-weight: 400;
         resize: none;
+        color: #0A3871;
     }
-    
+.encriptador textarea::placeholder{
+    color: #0A3871;
+}
     
 .encriptador textarea:focus, .encriptador textarea:focus-visible {
         outline: none;
@@ -89,52 +92,470 @@ main {
         font-weight: 400;
     }
     
-    
+    .no-show{
+        display:none;
+    }
 /*SECTION RESULT*/
-.resultado {
-    width: 30%;
-    height: 90vh;
-    padding: 20px;
-}
+    .resultado {
+        width: 30%;
+        height: 90vh;
+        padding: 20px;
+    }
+    .result-content{
+        background-color: white;
+        border-radius: 32px;
+        width: 19vw;
+        height: 87vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    }
+    #pre-ejecucion{
+        background-color: white;
+        border-radius: 32px;
+        width: 19vw;
+        height: 87vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .result-content div img{
+        width: 100%;
 
-.result-content{
-    background-color: white;
-    border-radius: 32px;
-    width: 19vw;
-    height: 87vh;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
+    }
+    #encriptador-area {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .no-text{
+        text-align: center;
+        font-weight: 700;
+        color: #343A40;
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+    .call-of-write {
+        text-align: center;
+        font-weight: 400;
+        color: #343A40;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #text-cifrado{
+        height: 84%;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #495057;
+        padding: 10px;
+        border: none !important;
+        resize: none;
+        max-height: 84%;
+        overflow: auto;
+    }
+    #text-cifrado::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    #text-cifrado:focus, #text-cifrado:focus-visible {
+        outline: none;
+    }
+    #copiar{
+        color: #0A3871;
+        width: 19vw;
+        height: 67px;
+        border-radius: 24px;
+        padding: 24px;
+        background-color: #D8DFE8;
+        font-size: 16px;
+        font-weight: 400;
+        
+    }
+  /* 
+  ----------------------------------------------------------------
+    ##Device = Tablets, Ipads (portrait/Vertical)
+    ##Screen = B/w 768px to 1024px
 
-.result-content div{
-    width: auto;
-    height: auto;
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    /*SECTION LOGO*/
+    .logo_class{
+        display: inline;
+        width: 120px;
+        height: 48px;
+        padding-left: 10px;
+        padding-top: 40px;
+    }
+    #logo_section{
+        height: 10vh;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
 
-}
+    /*SECTION ENCRIPTER*/
+    .encriptador{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        height: 640px;
+        padding-top: 5%;
+        padding-bottom: 2%;
+    }
+    .encriptador textarea {
+        width: 100%;
+        background: transparent;
+        border: none !important;
+        height: 76%;
+        font-size: 32px;
+        font-weight: 400;
+        resize: none;
+    }
+    
+    .encriptador textarea:focus, .encriptador textarea:focus-visible {
+        outline: none;
+    }
+    .btn-dencripter{
+        background-color: white;
+    }
+    /*SECTION RESULT*/
+    .resultado{
+        width: 100% !important;
+        height: 30%;
+        padding: 1%;
+    }
+    .result-content{
+        background-color: white;
+        border-radius: 32px;
+        width: 98% !important;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #pre-ejecucion{
+        background-color: white;
+        border-radius: 32px;
+        width: 100% ;
+        height: 9vh;
+    }
+    .result-content div img{
+        display: none;
 
-.result-content div img{
-    width: 100%;
+    }
+    #encriptador-area {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .no-text{
+        text-align: center;
+        font-weight: 700;
+        color: #343A40;
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+    .call-of-write {
+        text-align: center;
+        font-weight: 400;
+        color: #343A40;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #text-cifrado{
+        height: auto !important;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #495057;
+        padding: 10px;
+        font-family: "Inter", sans-serif;
+    }
+    #copiar{
+        color: #0A3871;
+        width: 88vw;
+        height: 67px;
+        border-radius: 24px;
+        padding: 24px;
+        background-color: #D8DFE8;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px;
+    }
+    footer {
+        padding-top: 20px;
+    }
+  }
 
-}
+  
+  /* 
+    ##Device = Baja resolución Tablets, Mobiles (Landscape/horizontal)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    /*SECTION LOGO*/
+    .logo_class{
+        display: inline;
+        width: 120px;
+        height: 48px;
+        padding-left: 10px;
+        padding-top: 40px;
+    }
+    #logo_section{
+        height: 10vh;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
 
-.encriptador-area {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.no-text{
-    text-align: center;
-    font-weight: 700;
-    color: #343A40;
-    font-size: 24px;
-    line-height: 28.8px;
-}
+    /*SECTION ENCRIPTER*/
+    .encriptador{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        height: 640px;
+        padding-top: 5%;
+        padding-bottom: 2%;
+    }
+    .encriptador textarea {
+        width: 100%;
+        background: transparent;
+        border: none !important;
+        height: 76%;
+        font-size: 32px;
+        font-weight: 400;
+        resize: none;
+    }
+    
+    .encriptador textarea:focus, .encriptador textarea:focus-visible {
+        outline: none;
+    }
+    .btn-dencripter, .btn-encripter{
+        width: 48%;
+        height: 67px;
+    }
+    .btn-dencripter{
+        background-color: white;
+    }
+    /*SECTION RESULT*/
+    .resultado{
+        width: 100% !important;
+        height: 100% !important;
+        padding: 9px;
+    }
+    .result-content{
+        background-color: white;
+        border-radius: 32px;
+        width: 98% !important;
+        height: 100% !important;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+    }
+    #pre-ejecucion{
+        background-color: white;
+        border-radius: 32px;
+        width: 92vw;
+        height: 9vh;
+    }
+    .result-content div img{
+        display: none;
 
-.call-of-write {
-    text-align: center;
-    font-weight: 400;
-    color: #343A40;
-    font-size: 16px;
-    line-height: 24px;
-}
+    }
+    #encriptador-area {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .no-text{
+        text-align: center;
+        font-weight: 700;
+        color: #343A40;
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+    .call-of-write {
+        text-align: center;
+        font-weight: 400;
+        color: #343A40;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #text-cifrado{
+        /* height: auto !important; */
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #495057;
+        padding: 10px;
+        font-family: "Inter", sans-serif;
+    }
+    #copiar{
+        color: #0A3871;
+        width: 88vw;
+        height: 67px;
+        border-radius: 24px;
+        padding: 24px;
+        background-color: #D8DFE8;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px;
+    }
+    footer {
+        padding-top: 20px;
+    }
+  } 
+    
+  
+  /* 
+    ##Device = La mayoría de los Smartphones Móviles (Portrait/Vertical)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    /*SECTION LOGO*/
+    
+    #logo_section{
+        height: 10vh;
+        padding-bottom: 10px;
+    }
+    .logo_class{
+        padding: 20px 0px 0px 0px;
+        object-fit: none;
+        width: 77px;    
+    }
+
+    /*SECTION ENCRIPTER*/
+    .encriptador{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        height: 640px;
+        padding-top: 5%;
+        padding-bottom: 2%;
+    }
+    .encriptador textarea {
+        width: 100%;
+        background: transparent;
+        border: none !important;
+        height: 76%;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        resize: none;
+    }
+    
+    .encriptador textarea:focus, .encriptador textarea:focus-visible {
+        outline: none;
+    }
+    .botonesEncriptador{
+        gap: 24px;
+    }
+    .btn-dencripter, .btn-encripter{
+        width: 100%;
+        height: 67px;
+    }
+    .btn-dencripter{
+        background-color: white;
+    }
+    /*SECTION RESULT*/
+    .resultado{
+        width: 100% !important;
+        height: 100%;
+        padding: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .result-content{
+        background-color: white;
+        border-radius: 32px;
+        width: 98%;
+        height: auto;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #pre-ejecucion{
+        background-color: white;
+        border-radius: 32px;
+        width: auto;
+        height: auto;
+        
+    }
+    .result-content div img{
+        display: none;
+
+    }
+    #encriptador-area {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        
+    }
+    
+    .no-text{
+        text-align: center;
+        font-weight: 700;
+        color: #343A40;
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+    .call-of-write {
+        text-align: center;
+        font-weight: 400;
+        color: #343A40;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #text-cifrado{
+        height: auto !important;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #495057;
+        padding: 10px;
+        font-family: "Inter", sans-serif;
+    }
+    #copiar{
+        color: #0A3871;
+        width: 95%;
+        height: 67px;
+        border-radius: 24px;
+        padding: 24px;
+        background-color: #D8DFE8;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px;
+    }
+    footer {
+        padding-top: 20px;
+    }
+    
+  }
